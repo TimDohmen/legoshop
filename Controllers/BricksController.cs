@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using legokit.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lego.Controllers
