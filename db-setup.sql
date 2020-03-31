@@ -1,3 +1,3 @@
-INSERT INTO kits (name, instructions, price)
-VALUES ("Fortnite Kit", "Floss on all your enemies with these animated lego pieces!", 117.99);
+INSERT INTO kitbricks (kitId, brickId, quantity)
+VALUES (3, 3, 10);
 

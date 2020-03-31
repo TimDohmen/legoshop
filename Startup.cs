@@ -36,6 +36,8 @@ namespace legokit
       services.AddTransient<BricksRepository>();
       services.AddTransient<KitsService>();
       services.AddTransient<KitsRepository>();
+      services.AddTransient<KitBricksService>();
+      services.AddTransient<KitBricksRepository>();
     }
 
     private IDbConnection CreateDBContext()
