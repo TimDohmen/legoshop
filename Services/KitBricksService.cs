@@ -15,6 +15,12 @@ namespace legokit.Services
       _krepo = krepo;
     }
 
+    // public IEnumerable<KitPart> GetBricks(int kitId)
+    // {
+    //   Kit exists = _krepo.Get(kitId);
+    //   if (exists == null) { throw new Exception("Invalid Id Homie"); }
+    //   return _repo.getBricksByKitId(kitId);
+    // }
     public IEnumerable<KitBrick> GetBricks(int kitId)
     {
       Kit exists = _krepo.Get(kitId);

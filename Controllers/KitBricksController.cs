@@ -23,18 +23,34 @@ namespace Lego.Controllers
 
     // GET api/values/5
     //kit id get all bricks for a single set
-    [HttpGet("{id}")]
-    public ActionResult<KitBrick> Get(int id)
+
+    // [HttpGet("{kitId}")]
+    // public ActionResult<KitPart> Get(int kitId)
+    // {
+    //   try
+    //   {
+    //     return Ok(_kbs.GetBricks(kitId));
+    //   }
+    //   catch (Exception e)
+    //   {
+    //     return BadRequest(e.Message);
+    //   }
+    // }
+
+    [HttpGet("{kitId}")]
+    public ActionResult<KitBrick> Get(int kitId)
     {
       try
       {
-        return Ok(_kbs.GetBricks(id));
+        return Ok(_kbs.GetBricks(kitId));
       }
       catch (Exception e)
       {
         return BadRequest(e.Message);
       }
     }
+
+
 
     // POST api/values
     [HttpPost]

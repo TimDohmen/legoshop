@@ -11,5 +11,11 @@ namespace legokit.Models
   }
 
 
+  public class KitPart : KitBrick
+  {
+    public string KitName { get; set; }
+    public string BrickName { get; set; }
+
+  }
 
 }
