@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using legokit.Models;
 using legokit.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +14,7 @@ namespace Lego.Controllers
   {
     private readonly BricksService _bs;
 
-    public BricksController(BrickService bs)
+    public BricksController(BricksService bs)
     {
       _bs = bs;
     }
@@ -48,22 +49,16 @@ namespace Lego.Controllers
 
     // POST api/values
     [HttpPost]
-    public ActionResult<Brick> Post([FromBody] string value)
+    public ActionResult<Brick> Post([FromBody] Brick newBrick)
     {
       try
       {
-        return Ok(_bs.Create(value));
+        return Ok(_bs.Create(newBrick));
       }
       catch (Exception e)
       {
         return BadRequest(e.Message);
       }
-    }
-
-    // PUT api/values/5
-    [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
-    {
     }
 
     // DELETE api/values/5
@@ -81,4 +76,4 @@ namespace Lego.Controllers
     }
   }
 }
-}
+

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using legokit.Models;
 using legokit.Repositories;
 
 namespace legokit.Services
@@ -11,6 +12,7 @@ namespace legokit.Services
     {
       _repo = repo;
     }
+
     public Brick Get(int id)
     {
       Brick exists = _repo.Get(id);
